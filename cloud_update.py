@@ -40,7 +40,7 @@ def generate_chart():
 
     plt.figure(figsize=(10, 5))
     plt.plot(
-        pd.to_datetime(df.index),
+        pd.to_datetime(df.index, utc=True),
         df["Close"],
         label="Apple Close Price",
         color="blue",
